@@ -75,14 +75,14 @@ class ListViewDemo extends StatelessWidget {
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25.0),
                 ),
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 4,
-                child: buidListSoldoutCar(),
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height / 8,
-                child: buildSoldoutBannerCompaign(),
-              ),
+//              Container(
+//                height: MediaQuery.of(context).size.height / 4,
+//                child: buidListSoldoutCar(),
+//              ),
+//              Container(
+//                height: MediaQuery.of(context).size.height / 8,
+//                child: buildSoldoutBannerCompaign(),
+//              ),
               Container(
                 margin: EdgeInsets.only(top: 10.0),
                 child: Text(
@@ -93,6 +93,9 @@ class ListViewDemo extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height / 3,
                 child: buidWinnerList(),
+              ),
+              Container(
+                child: buidWishList(),
               ),
             ],
           ),
@@ -215,7 +218,13 @@ class ListViewDemo extends StatelessWidget {
                     height: 55,
                     margin: EdgeInsets.all(8.0),
                     child: RaisedGradientButton(
-                        child: Text('Prize Details', style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                        child: Text(
+                          'Prize Details',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
                         gradient: LinearGradient(
                           colors: <Color>[Color(0xff0A2E58), Color(0xff0F4482)],
                         ),
@@ -235,7 +244,13 @@ class ListViewDemo extends StatelessWidget {
                     width: 170,
                     height: 55,
                     child: RaisedGradientButton(
-                        child: Text('Add to Cart', style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.bold),),
+                        child: Text(
+                          'Add to Cart',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold),
+                        ),
                         gradient: LinearGradient(
                           colors: <Color>[Color(0xff1C6FD2), Color(0xff1D70D4)],
                         ),
@@ -292,101 +307,101 @@ class ListViewDemo extends StatelessWidget {
     );
   }
 
-  buidListSoldoutCar() {
-    return ListView.builder(
-      itemCount: 8,
-      itemBuilder: (context, index) {
-        return listWidgetSoldout(context);
-      },
-    );
-  }
+//  buidListSoldoutCar() {
+//    return ListView.builder(
+//      itemCount: 8,
+//      itemBuilder: (context, index) {
+//        return listWidgetSoldout(context);
+//      },
+//    );
+//  }
 
-  listWidgetSoldout(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
-      ),
-      elevation: 5.0,
-      child: Container(
-        child: Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [Icon(Icons.home)],
-            ),
-            Container(
-              child: Image.asset('assets/images/image.png',
-                  height: 100, width: 40),
-            ),
-            Container(
-              child: Center(
-                child: Text('But aH2H Hoodie for:AED 825.0'),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(top: 5.0),
-              padding: EdgeInsets.all(5.0),
-              child: Text('But aH2H Hoodie for:AED 825.0'),
-            ),
-            Container(
-              margin: EdgeInsets.all(5.0),
-              width: 330,
-              height: 60,
-              decoration: BoxDecoration(
-                color: Color(0xffEFEFEF),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Center(
-                  child: Text(
-                'Draw Date:27 August 2020',
-                style: TextStyle(
-                    color: Color(0xff9E9E9E), fontWeight: FontWeight.bold),
-              )),
-            ),
-            Container(
-              margin: EdgeInsets.all(8.0),
-              child: Center(
-                  child: Text(
-                'SOLD OUT',
-                style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xffEB3221)),
-              )),
-            )
-          ],
-        ),
-      ),
-    );
-  }
+//  listWidgetSoldout(BuildContext context) {
+//    return Card(
+//      shape: RoundedRectangleBorder(
+//        borderRadius: BorderRadius.circular(10),
+//      ),
+//      elevation: 5.0,
+//      child: Container(
+//        child: Column(
+//          children: [
+//            Row(
+//              mainAxisAlignment: MainAxisAlignment.end,
+//              children: [Icon(Icons.home)],
+//            ),
+//            Container(
+//              child: Image.asset('assets/images/image.png',
+//                  height: 100, width: 40),
+//            ),
+//            Container(
+//              child: Center(
+//                child: Text('But aH2H Hoodie for:AED 825.0'),
+//              ),
+//            ),
+//            Container(
+//              margin: EdgeInsets.only(top: 5.0),
+//              padding: EdgeInsets.all(5.0),
+//              child: Text('But aH2H Hoodie for:AED 825.0'),
+//            ),
+//            Container(
+//              margin: EdgeInsets.all(5.0),
+//              width: 330,
+//              height: 60,
+//              decoration: BoxDecoration(
+//                color: Color(0xffEFEFEF),
+//                borderRadius: BorderRadius.circular(10),
+//              ),
+//              child: Center(
+//                  child: Text(
+//                'Draw Date:27 August 2020',
+//                style: TextStyle(
+//                    color: Color(0xff9E9E9E), fontWeight: FontWeight.bold),
+//              )),
+//            ),
+//            Container(
+//              margin: EdgeInsets.all(8.0),
+//              child: Center(
+//                  child: Text(
+//                'SOLD OUT',
+//                style: TextStyle(
+//                    fontSize: 20.0,
+//                    fontWeight: FontWeight.bold,
+//                    color: Color(0xffEB3221)),
+//              )),
+//            )
+//          ],
+//        ),
+//      ),
+//    );
+//  }
 
-  buildSoldoutBannerCompaign() {
-    return Container(
-      margin: EdgeInsets.only(top: 7.0),
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.red[500],
-        ),
-        color: Color(0xff1394A9),
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),
-      child: ListTile(
-        leading: Image.asset('assets/images/image.png', height: 100, width: 40),
-        trailing: Icon(Icons.home),
-        title: Text(
-          'Earn 100 points and start shopping',
-          style: TextStyle(color: Colors.white),
-        ),
-        subtitle: Text('Click here to get Started',
-            style: TextStyle(color: Colors.white)),
-      ),
-    );
-  }
+//  buildSoldoutBannerCompaign() {
+//    return Container(
+//      margin: EdgeInsets.only(top: 7.0),
+//      decoration: BoxDecoration(
+//        border: Border.all(
+//          color: Colors.red[500],
+//        ),
+//        color: Color(0xff1394A9),
+//        borderRadius: BorderRadius.all(Radius.circular(10)),
+//      ),
+//      child: ListTile(
+//        leading: Image.asset('assets/images/image.png', height: 100, width: 40),
+//        trailing: Icon(Icons.home),
+//        title: Text(
+//          'Earn 100 points and start shopping',
+//          style: TextStyle(color: Colors.white),
+//        ),
+//        subtitle: Text('Click here to get Started',
+//            style: TextStyle(color: Colors.white)),
+//      ),
+//    );
+//  }
 
   Widget listWidgetWinner(BuildContext context) {
     return Card(
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20),
       ),
       elevation: 5.0,
       child: Container(
@@ -396,15 +411,20 @@ class ListViewDemo extends StatelessWidget {
               decoration: BoxDecoration(
                   border: Border.fromBorderSide(
                       BorderSide(color: Colors.blue, width: 1.0)),
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Color(0xff9B28FF)),
+                  borderRadius: BorderRadius.only(
+                    topLeft: const Radius.circular(30.0),
+                    topRight: const Radius.circular(30.0),
+                  ),
+                  color: Color(0xff664B7E)),
               width: 400.0,
               height: 50.0,
               child: Center(
                 child: Text(
                   'Congratulations',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.white),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 20),
                 ),
               ),
             ),
@@ -412,36 +432,166 @@ class ListViewDemo extends StatelessWidget {
               margin: EdgeInsets.only(top: 10.0),
               child: Center(
                 child: Text(
-                  'Get a chance to win',
+                  'Nadeem Qadir',
                   style: TextStyle(
-                      color: Color(0xff2182F7),
+                      color: Color(0xff1477EE),
                       fontWeight: FontWeight.bold,
-                      fontSize: 15),
+                      fontSize: 20),
                 ),
               ),
             ),
             Container(
-              child: Center(
-                child: Text('Lorem Ipsum is simply dummy text of the'),
+                margin: EdgeInsets.only(left: 20.0),
+                child: Row(
+                  children: [
+                    Text('on Winning '),
+                    Text(
+                      'Samsung 75 Flat QLED TV',
+                      style: TextStyle(
+                          color: Color(0xff5A5A5A),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),
+                    ),
+                  ],
+                )),
+            Container(
+                margin: EdgeInsets.only(top: 20.0, left: 70.0),
+                child: Row(
+                  children: [
+                    Image.asset('assets/images/image.png',
+                        height: 100, width: 100),
+                    CircleAvatar(
+                      radius: 55,
+                      backgroundColor: Color(0xffFDCF09),
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundImage:
+                            AssetImage('assets/images/profile.jpg'),
+                      ),
+                    )
+                  ],
+                )),
+            Container(
+              margin: EdgeInsets.only(top: 15.0, left: 68.0),
+              child: Row(
+                children: [
+                  Text('Coupon no. ',
+                      style: TextStyle(
+                          color: Color(0xff6E6E6E),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15)),
+                  Text('EL-00290-00061-0',
+                      style: TextStyle(
+                          color: Color(0xff4293EE),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15))
+                ],
               ),
             ),
             Container(
-              child: Image.asset('assets/images/image.png',
-                  height: 100, width: 40),
-            ),
-            Container(
-              child: Text('Get a chance to win',
-                  style: TextStyle(
-                      color: Color(0xff2182F7),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15)),
-            ),
-            Container(
               margin: EdgeInsets.only(bottom: 5.0),
-              child: Text('Lorem Ipsum is simply dummy text of the'),
+              child: Text(
+                'Announced: 10:56 AM,14 September,2020',
+                style: TextStyle(
+                    color: Color(0xff6E6E6E), fontWeight: FontWeight.bold),
+              ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget buidWishList() {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Flexible(
+            flex: 1,
+            child: Container(
+              width: 300,
+              height: 150,
+              child: Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                elevation: 4,
+                child: Container(
+                    padding: EdgeInsets.all(20),
+                    child: Image.asset(
+                      'assets/images/image.png',
+                    )),
+              ),
+            ),
+          ),
+          Flexible(
+            flex: 2,
+            child: Container(
+              margin: EdgeInsets.only(top: 20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Hashtag Hoodie',
+                    style: TextStyle(
+                        color: Color(0xff616161), fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Fully Furnished Apartment',
+                    style: TextStyle(
+                        color: Color(0xff616161), fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'USD 210.00',
+                    style: TextStyle(
+                        color: Color(0xff1477EE),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18),
+                  ),
+                  Container(
+                      margin: EdgeInsets.only(top: 50.0),
+                      child: LinearProgressIndicator(
+                          backgroundColor: Color(0xffFDCF09))),
+                  Container(
+                    child: Text(
+                      '569 sold out of 1980',
+                      style: TextStyle(
+                          color: Color(0xff000000),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Flexible(
+            flex: 1,
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 20.0),
+                    width: 30,
+                    height: 30,
+                    child: Icon(Icons.home, size: 20),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Color(0xFFe0f2f1)),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 70.0),
+                    width: 30,
+                    height: 30,
+                    child: Icon(Icons.home, size: 20),
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle, color: Color(0xFFe0f2f1)),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
